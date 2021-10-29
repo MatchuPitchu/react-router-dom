@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 
 const ProductDetail = () => {
   // built-in hook allows catching of dynamic param in URL path;
-  // hook returns obj with key(s) of all dynamic placeholder used in URL path (can use multiple)
+  // hook returns obj with key(s) of all dynamic placeholders used in URL path (can use multiple)
   const { productId } = useParams();
 
   return (

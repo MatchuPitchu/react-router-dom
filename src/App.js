@@ -10,6 +10,8 @@ const App = () => {
       <Header />
       <main>
         <Switch>
+          {/* exact is always needed, when there are more than one Route that matches the path
+          since only always first path match is displayed inside the Switch component */}
           {/* use Redirect component to redirect user */}
           <Route path='/' exact>
             <Redirect to='/welcome' />
@@ -29,8 +31,8 @@ const App = () => {
             <Products />
           </Route>
           {/* dynamic routes with params;
-        :productId is a dynamic placeholder that accepts every value;
-        inside wrapped component you can get access to param ':productId' */}
+          :productId is a dynamic placeholder that accepts every value;
+          inside wrapped component you can get access to param ':productId' */}
           <Route path='/products/:productId'>
             <ProductDetail />
           </Route>
