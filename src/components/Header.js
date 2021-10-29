@@ -8,7 +8,7 @@ const Header = () => {
         <ul>
           <li>
             {/* Link component allows to change path without refreshing whole page */}
-            {/* NavLink sets css class on active anchor item that you can display active link differently */}
+            {/* NavLink sets css class on active anchor item that you can style active link differently */}
             <NavLink activeClassName={classes.active} to='/welcome'>
               Welcome
             </NavLink>
