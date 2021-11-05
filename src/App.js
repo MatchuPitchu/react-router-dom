@@ -12,9 +12,9 @@ const App = () => {
         {/* UPDATE with React Router DOM v6 - to access v5 look at previous commits */}
         {/* 
           a) <Routes> replaces <Switch>
-          b) have to wrappe always <Route> components into <Routes>
+          b) have to wrap always <Route> components into <Routes>
           b) components are not anymore wrapped into <Route></Route> ->
-            they're passed via element prop as JSX into <Route /> 
+            they're passed via element prop as JSX into <Route> 
           c) exact prop AND its behavior no longer exists -> 
             now Router looks always for exact matches
           d) if you want to imitate old behavior to render multiple <Route> components,
@@ -25,7 +25,7 @@ const App = () => {
             <Route path='/products/*' /> and <Route path='/products/:productId' />
             it would pick the most exact or explicitly declared path, that means 
             here the second one; 
-          f) in context of e): ORDER of Route components is no longer important;
+          f) in context of e): order of Route components is no longer important;
           g) <Navigate> replaces <Redirect> -> add replace prop to <Navigate> when
             you wanna have real Redirect, otherwise link is only pushed to browser history
           h) Links and nested Routes have relative paths depending on the root path 
@@ -41,12 +41,11 @@ const App = () => {
               notice: nested route then still uses relative path;
               -> advantage to have all routes in one place;
               -> use <Outlet> component in child component to position nested route
-          j) useHistory hook exists anymore; replaced by useNavigate hook
+          j) useHistory is replaced by useNavigate hook
               const navigate = useNavigate();
               navigate('/welcome', { replace: true });
               -> omit second argument if you wanna push path to browser history
               navigate(-1) -> navigates to previous page (-x or x for xth page before or forward)
-          q) <Prompt> exists anymore
         */}
         <Routes>
           {/* exact is always needed, when there are more than one Route that matches the path
