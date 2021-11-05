@@ -8,13 +8,27 @@ const Header = () => {
         <ul>
           <li>
             {/* Link component allows to change path without refreshing whole page */}
-            {/* NavLink sets css class on active anchor item that you can style active link differently */}
-            <NavLink activeClassName={classes.active} to='/welcome'>
+            {/* NavLink can handle different styling if link is active */}
+
+            {/* UPDATE with React Router DOM v6 - to access v5 look at previous commits */}
+            {/* 
+              a) activeClassName no longer exists and is replaced by anonymous fn with
+                parameter obj navData that has internally changed property isActive -> 
+                change from <NavLink activeClassName={classes.active} to='/products'> 
+                to
+            */}
+            <NavLink
+              className={(navData) => (navData.isActive ? classes.active : '')}
+              to='/welcome'
+            >
               Welcome
             </NavLink>
           </li>
           <li>
-            <NavLink activeClassName={classes.active} to='/products'>
+            <NavLink
+              className={(navData) => (navData.isActive ? classes.active : '')}
+              to='/products'
+            >
               Products
             </NavLink>
           </li>
