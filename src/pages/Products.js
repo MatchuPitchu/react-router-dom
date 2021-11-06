@@ -1,6 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 
 const Products = () => {
+  // dummy example for useNavigate hook (replaces useHistory of v5)
   const navigate = useNavigate();
   navigate('/welcome', { replace: true });
 
