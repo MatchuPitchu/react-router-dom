@@ -29,14 +29,16 @@ import ProductDetail from './pages/ProductDetail';
 //   - when using nested routes then at top level you have to add '/*'
 //     in path to tell React Router that the passed element is even displayed if there
 //     is no exact path match (-> since nested routes extend the whole path)
-//   - nested routes are now relative paths, so only add extension of root path in child component;
-//     relative path is defined without '/' (-> <Link to={`${id}`}> whereas absolute path is defined
-//     with '/' (-> <Link to={`/quotes/${id}`}>)
+//   - BUT ATTENTION: only routes with descendant routes (defined in other components)
+//     use a trailing * in their path to indicate they match deeply
 //   - nested routes could be defined in the child component as with v5 OR defined
 //     directly in the root component wrapped into the root <Route>;
 //     notice: nested route then still uses relative path;
 //     -> advantage to have all routes in one place;
 //     -> use <Outlet> component in child component to position nested route
+//   - nested routes are now relative paths, so only add extension of root path in child component;
+//     relative path is defined without '/' (-> <Link to={`${id}`}> whereas absolute path is defined
+//     with '/' (-> <Link to={`/quotes/${id}`}>)
 // j) useHistory is replaced by useNavigate hook
 //     const navigate = useNavigate();
 //     navigate('/welcome', { replace: true });
