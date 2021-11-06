@@ -29,7 +29,9 @@ import ProductDetail from './pages/ProductDetail';
 //   - when using nested routes then at top level you have to add '/*'
 //     in path to tell React Router that the passed element is even displayed if there
 //     is no exact path match (-> since nested routes extend the whole path)
-//   - nested routes are now relative paths, so only add extension of root path in child component
+//   - nested routes are now relative paths, so only add extension of root path in child component;
+//     relative path is defined without '/' (-> <Link to={`${id}`}> whereas absolute path is defined
+//     with '/' (-> <Link to={`/quotes/${id}`}>)
 //   - nested routes could be defined in the child component as with v5 OR defined
 //     directly in the root component wrapped into the root <Route>;
 //     notice: nested route then still uses relative path;
