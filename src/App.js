@@ -60,6 +60,8 @@ const App = () => {
           :productId is a dynamic placeholder that accepts every value;
           inside component you can get access to param ':productId' */}
           <Route path='/products/:productId' element={<ProductDetail />} />
+          {/* Not found option, BUT: doesn't work with /welcome/xyz since that matches more exact path above */}
+          <Route path='*' element={<p>NOT FOUND!</p>} />
         </Routes>
       </main>
     </div>
